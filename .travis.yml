@@ -1,4 +1,5 @@
 language: node_js
+node_js: 8.11.1
 sudo: enabled
 install: npm install
 before_install:
@@ -6,4 +7,3 @@ before_install:
 services: mysql
 script: node ./app/model/sync/init-area.js && node ./app/model/sync/init-gym.js && node ./app/model/sync/init-new.js && node ./app/model/sync/init-new_type.js && node ./app/model/sync/init-reserve.js && node ./app/model/sync/init-site.js && node ./app/model/sync/init-sport.js && node ./app/model/sync/init-type.js && set NODE_ENV=test&&node app.js
 
- 
