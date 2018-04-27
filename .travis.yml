@@ -5,5 +5,5 @@ install: npm install
 before_install:
   - mysql -e 'CREATE DATABASE IF NOT EXISTS test;'
 services: mysql
-script: node ./app/model/sync/init-area.js && node ./app/model/sync/init-gym.js && node ./app/model/sync/init-new.js && node ./app/model/sync/init-new_type.js && node ./app/model/sync/init-reserve.js && node ./app/model/sync/init-site.js && node ./app/model/sync/init-sport.js && node ./app/model/sync/init-type.js && set NODE_ENV=test&&node app.js
+script: node ./app/model/sync/init-area.js && node ./app/model/sync/init-gym.js && node ./app/model/sync/init-new.js && node ./app/model/sync/init-new_type.js && node ./app/model/sync/init-reserve.js && node ./app/model/sync/init-site.js && node ./app/model/sync/init-sport.js && node ./app/model/sync/init-type.js && set NODE_ENV=test && NODE_ENV=test && node app.js
 
