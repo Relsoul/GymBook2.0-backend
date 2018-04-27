@@ -50,12 +50,15 @@ if (output) {
 
 server.listen(8991, () => {
 
-    if (env !== 'development') {
+    if (env !== 'development' || env !== 'test') {
         console.log('Production mode does not need to check eslint');
     }
 
     console.log('eslint done');
     console.log('start 8991 port');
+    if (env === 'test') {
+        process.exit();
+    }
 });
 
 global.soul = {
