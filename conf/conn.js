@@ -5,7 +5,7 @@ const Sequelize = require('sequelize');
 const env = process.env.NODE_ENV ? process.env.NODE_ENV : 'development';
 
 if (env === 'test') {
-    conf = require('./conf/conf-ci.js');
+    conf = require('../conf/conf-ci.js');
 }
 
 console.log('conn env', env);
