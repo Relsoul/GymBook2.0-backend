@@ -1,6 +1,9 @@
 
 # GymBook2.0-backend
 
+不定期同步主仓库进行编译
+[![Build Status](https://travis-ci.org/Relsoul/GymBook2.0-backend.svg?branch=master)](https://travis-ci.org/Relsoul/GymBook2.0-backend)
+
 # 后端
 [项目模块](http://note.youdao.com/noteshare?id=a6da5822283bf8cecc4e04a2df2a3b0d)
 
