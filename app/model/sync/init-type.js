@@ -1,3 +1,5 @@
 const { model } = require('../type');
 
-model.sync({ force: true });
+model.sync({ force: true }).then(() => {
+    process.exit();
+});
