@@ -22,7 +22,7 @@ const cli = new CLIEngine({
 
 const env = process.env.NODE_ENV ? process.env.NODE_ENV : 'development';
 
-if (env === test) {
+if (env === 'test') {
     conf = require('./conf/conf-ci.js');
 }
 
