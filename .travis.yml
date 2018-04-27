@@ -1,0 +1,8 @@
+language: node_js
+sudo: enabled
+install: npm install
+before_install:
+  - mysql -e 'CREATE DATABASE IF NOT EXISTS test;'
+services: mysql
+script: node ./sync/init-area.js && node ./sync/init-gym.js && node ./sync/init-new.js && node ./sync/init-new_type.js && node ./sync/init-reserve.js && node ./sync/init-site.js && node ./sync/init-sport.js && node ./sync/init-type.js && set NODE_ENV=test&&node app.js
+

@@ -21,6 +21,11 @@ const cli = new CLIEngine({
 });
 
 const env = process.env.NODE_ENV ? process.env.NODE_ENV : 'development';
+
+if (env === test) {
+    conf = require('./conf/conf-ci.js');
+}
+
 console.log('当前运行版本', process.version, '当前运行环境', env);
 // lint myfile.js and all files in lib/
 const report = cli.executeOnFiles([path.join(__dirname, './app/**/*.js')]);
